@@ -1,0 +1,17 @@
+{
+  "name": "Seasonal veg converter",
+  "version": "1.0",
+  "description": "Converts vegetables to their seasonal substitutes",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://cooking.nytimes.com/recipes/*"],
+      "js": ["popup.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "manifest_version": 3
+}
